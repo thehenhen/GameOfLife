@@ -11,7 +11,9 @@ function setup() {
 
 function draw() {
   background(220);
-  landingUpdate();
+  if(moving){
+    landingUpdate();
+  }
   landingDisplay();
 }
 function landingDisplay(){
