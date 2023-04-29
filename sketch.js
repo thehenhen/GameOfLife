@@ -115,3 +115,18 @@ function landingInitialize(){
     xSize=(width-(width%20))/20;
     ySize=(height-(height%20))/20+1;
 }
+
+function keyPressed(){
+    if(keyCode==32){
+      moving=!moving;
+    }
+}
+
+function mousePressed(){
+    board[(mouseX-(mouseX%20))/20][(mouseY-(mouseY%20))/20]*=-1;
+    board[(mouseX-(mouseX%20))/20][(mouseY-(mouseY%20))/20]+=1;
+}
+
+function mouseDragged(){
+    mousePressed();
+}
